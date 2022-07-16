@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel='icon' href='images/dashboard.png'>
+    <link rel='icon' href='icons/dashboard_black.png'>
   </head>
 
   <body>
@@ -14,44 +14,49 @@
 
       <div class="sidebar">
         <div class="title">
-          <p>Icon</p>
+          <img src='icons/dashboard_white.png' alt='Dashboard icon' width='50' height='50'> 
           <h1>Dashboard</h1>    
         </div>
         <div class="side-nav">
-          <p>Icon1</p>
+          <img src='icons/home_white_24dp.svg' alt='Home icon' width='25' height='25'> 
           <p>Home</p>
-          <p>Icon2</p>
+          <img src='icons/account_box_white_24dp.svg' alt='Profile icon' width='25' height='25'> 
           <p>Profile</p>
-          <p>Icon3</p>
+          <img src='icons/chat_bubble_white_24dp.svg' alt='Messages icon' width='25' height='25'> 
           <p>Messages</p>
-          <p>Icon4</p>
+          <img src='icons/history_white_24dp.svg' alt='View History icon' width='25' height='25'> 
           <p>History</p>
-          <p>Icon5</p>
+          <img src='icons/task_alt_white_24dp.svg' alt='Task icon' width='25' height='25'> 
           <p>Tasks</p>
-          <p>Icon6</p>
+          <img src='icons/groups_white_24dp.svg' alt='Community of People icon' width='25' height='25'> 
           <p>Communities</p>
         </div>
         <div class="side-nav">
-          <p>Icon7</p>
+          <img src='icons/settings_white_24dp.svg' alt='Settings icon' width='25' height='25'> 
           <p>Settings</p>
-          <p>Icon8</p>
+          <img src='icons/help_center_white_24dp.svg' alt='Get Support icon' width='25' height='25'> 
           <p>Support</p>
-          <p>Icon9</p>
+          <img src='icons/verified_user_white_24dp.svg' alt='Privacy Settings icon' width='25' height='25'> 
           <p>Privacy</p>
         </div>
       </div>
 
       <div class="header">
         <div class="header-top">
-          <div class="header-top-left">
-            <p>[Search Icon]</p>
-            <p>[Search Bar]</p>
+          <div class="search-wrapper">
+            <img id="search-icon" src='icons/search.svg' alt='Search icon' width='23' height='23'/> 
+            <input id="search-bar" placeholder="Search" type="text">
           </div>
 
           <div class="header-top-right">
-            <p>[Not. Bell]</p>
-            <p>[Display Pic]</p>
-            <p>[Name]</p>
+            <img id="notification-icon" src='icons/bell.svg' alt='Notification Bell icon' width='27' height='27'/> 
+            <div class="switch-wrapper">
+              <img id="night-mode" src='icons/night-mode.png' alt='Dark/Light Theme icon' width='26' height='26' style='transform:rotate(35deg)'>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label> 
+            </div>
           </div>
         </div>
             
@@ -120,7 +125,7 @@
       <div class='footer'>
         <p>Copyright © 2021 beiyingseah&nbsp</p>
         <a href='https://github.com/beiyingseah'>
-          <img src='images/githubLogo32px.png' alt='Github&#39s icon, a feline-cephalopod hybrid, known as Octocat.' width='20' height='20'> 
+          <img src='icons/githubLogo32px.png' alt='Github&#39s icon, a feline-cephalopod hybrid, known as Octocat.' width='20' height='20'> 
         </a>
       </div>
 
