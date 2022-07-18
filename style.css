@@ -166,16 +166,23 @@ input:checked + .slider {
 
 .side-nav {
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: auto;
     grid-template-rows: repeat(9, auto);
-    grid-gap: 20px 10px;
-    align-items: center;
+    row-gap: 20px;
     font-size: 20px;
     font-weight: 400;
 }
 
 .side-nav img {
     justify-self: center;
+}
+
+.side-nav a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* MAIN CONTENT */
