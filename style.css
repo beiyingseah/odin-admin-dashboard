@@ -1,47 +1,72 @@
-/* META-STYLING */
+/** META-STYLING (*/
 /* Remove HTML's default styling  (CSS reset?) */
 * {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif, Arial;
   }
 
-/* CONTAINER */
+
+/** BASE ELEMENTS **/
+html {
+    /* DEFAULT LIGHT COLORS */
+    /* DARK MODE COLORS */
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif, Arial;
+    font-size: 18px;
+}
+
+body {
+    min-height: 100vh;
+}
+
 .container {
     display: grid;
     grid-template-columns: minmax(300px, 350px) 3fr;
+    grid-auto-rows: auto 4fr;
 }
 
-
-.container div {
-    padding: 15px;
-}
-
-
-/* HEADER */ 
+/** HEADER **/ 
+/* HEADER CONTAINERS */
 .header {
+    grid-column: 2 / 3;
     background-color: white;
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
-    padding: 20px 50px;
+    row-gap: 35px;
+    padding: 25px 50px;
+    height: 150px;
 }
 
 .header-top {
-    border: 2px solid black;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 60px;
 }
 
 .header-top-right {
-    border: 2px solid greenyellow;
     display: flex;
     align-items: center;
     column-gap: 15px;
 }
 
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bottom-left {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.header-bottom-right {
+    display: flex;
+    column-gap: 35px;
+}
+
+/* HEADER COMPONENTS */
+/* SEARCH */
 .search-wrapper {
-    border: 2px solid greenyellow;
     min-width: 500px;
     position: relative;
     display: flex;
@@ -50,7 +75,7 @@
 
 #search-icon {
     position: absolute;
-    padding-left: 3px;
+    padding-left: 8px;
 }
 
 #search-bar {
@@ -58,32 +83,54 @@
     border-radius: 20px;
     height: 30px;
     width: 100%;
-    padding: 2px 22px 2px 30px;
+    padding: 2px 22px 2px 35px;
     background-color: #f0f0f0;
-    font-weight: 300;
-    font-size: 16px;
-    }
-
-.header-bottom {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 100;
 }
 
-.header-bottom-left {
-    border: 2px solid greenyellow;
-    display: flex;
-    column-gap: 20px;
+/* HEADER MESSAGE */
+.welcome-message a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.header-bottom-right {
-    border: 2px solid greenyellow;
-    display: flex;
-    column-gap: 35px;
-
+#custom-greeting {
+    font-size: 0.8rem;
 }
 
-/* TOGGLE SWITCH */
+.welcome-message p {
+    padding-bottom: 8px;
+}
+
+.header-bottom-left button {
+    background-color: hsl(0, 0%, 94%);
+    border: none;
+    border-radius: 45px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding: 8px 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+}
+
+.header-bottom-left button:hover {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.header-bottom-left button:active {
+  background-color: hsl(0, 0%, 88%);
+  transform: translateY(1px);
+}
+
+/* DARK/LIGHT THEME TOGGLE */
 /* The switch - the box around the slider */
 .switch-wrapper {
     display: flex;
@@ -145,32 +192,31 @@ input:checked + .slider {
     transform: translateX(26px);
   }
 
-
-/* SIDE BAR & DASHBOARD TITLE */ 
+/** SIDE BAR **/
+/* DASHBOARD TITLE */ 
 .sidebar {
+    grid-row: 1 / 4;
     background-color: skyblue;
     color: white;
-    grid-row: 1 / 4;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 50px auto auto;
     grid-row-gap: 50px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .title {
     display:flex;
     column-gap: 25px;
     align-items: center;
-    font-size: larger;
+    font-size: 1rem;
 }
 
 .side-nav {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(9, auto);
-    row-gap: 20px;
-    font-size: 20px;
-    font-weight: 400;
+    grid-template-rows: repeat(auto-fit, 40px);
+    row-gap: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .side-nav img {
@@ -185,7 +231,7 @@ input:checked + .slider {
     color: inherit;
 }
 
-/* MAIN CONTENT */
+/** MAIN CONTENT **/
 .main-content {
     background-color: lightgrey;
     grid-row: 2 / 4;
@@ -193,47 +239,76 @@ input:checked + .slider {
     grid-template-columns: 2fr 1fr;
 }
 
-
 /* PROJECT CARDS */
-.main-content .projects {
+.projects {
     background-color: pink;
     grid-column: 1 / 2;
     display: grid;
-    grid-template-rows: auto 1fr;
-    padding: 0;
+    grid-template-rows: 50px 1fr;
+    row-gap: 10px;
+    padding: 15px 20px;
 }
 
-.main-content .cards {
+.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 0;
+    width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: 200px;
 }
-
 
 /* WIDGETS */
-.main-content .widgets {
-    background-color: mediumpurple;
+.widgets {
+    background-color: white;
     grid-column: 2;
     display: grid;
-    grid-row-gap: 50px;
-    padding: 0;
+    grid-template-rows: auto auto;
+    padding: 15px 20px;
 }
 
-.announcements > div,
-.trending > div {
-    background-color: peru;
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    row-gap: 5px;
 }
 
-.widgets > div {
-    padding: 0;
-    margin: 0;
+.announcements article {
+    display: grid;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.50) ;
+    border-radius: 8px;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+
+.announcements article p {
+    border-bottom: 5px solid black;
+    font-size: 0.9rem;
+}
+
+.trending article {
+    display: grid;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.50) ;
+    border-radius: 8px;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.trending article div>p {
+    font-size: 0.9rem;
+    color: #6d6d6d;
 }
 
 /* FONTS */
 /* for project cards & widget headings*/
 .projects h3,
 .widgets h3 {
-    margin: 10px;
+    margin-top: 20px;
 }
 
 /* FOOTER */
@@ -241,7 +316,7 @@ input:checked + .slider {
     font-family: Courier, 'Helvetica Neue', sans-serif;
     color: black;
     text-align: center;
-    font-size: 18px;
+    font-size: 1rem;
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
