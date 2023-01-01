@@ -3,7 +3,7 @@
 For my 7th project for The Odin Project, I build a full dashboard design. For the purposes of this lesson, I lean on Grid for most of the layout work. 
 
 
-KEY LEARNINGS FROM INTERMEDIATE HTML & CSS APPLIED
+## KEY LEARNINGS FROM INTERMEDIATE HTML & CSS APPLIED
 - Html tag; structural pseudo-classes for implementing light/dark theme (:root); child combinator to select only child divs for setting base margin & padding settings; grid-auto-flows
 
 TODOs
@@ -13,17 +13,17 @@ TODOs
 - To enable dynamic expansion and shrinking of project cards section when browser window is resized by user
 - To apply minmax to Sidebar, Header & Widget sections to control extent of shrinking
 
-EXTRA CREDIT
+## EXTRA CREDIT
 1. Added personal flair to dashboard's colour palette & icons 
 2. Added real functionality to content: (i) Links to actual project repos in GitHub for the respective project cards (ii) Link to GitHub profile for profile name & icon (iii) Links in navigation panel back to index page ("/#")
 
-FUTURE VERSIONS
+## FUTURE VERSIONS
 1. Animate the browsing (hovering) of (i) navigation bar options (ii) Buttons (iii) Cards to provide positive user feedback
 2. Add Dark/Light Mode in place of the DP on top-right corner: (i) toggle design (ii) actual functionality with JS (revision time!)
 
 
-REFERENCES FOR THIS PROJECT
-- Assets
+## REFERENCES FOR THIS PROJECT
+### Assets
 [Icons]
 https://www.flaticon.com/ 
 https://feathericons.com
