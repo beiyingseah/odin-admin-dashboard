@@ -24,17 +24,17 @@ TODOs
 
 ## REFERENCES FOR THIS PROJECT
 ### Assets
-[Icons]
+- [Icons]
 https://www.flaticon.com/ 
 https://feathericons.com
 https://fonts.google.com/?icon.set=Material+Icons
-[Display Pics] 
+- [Display Pics] 
 https://userpics.craftwork.design/
-[Colour palette/theme creation] 
+- [Colour palette/theme creation] 
 https://coolors.co/palette/6c8dd2-779be7-f39b6d-f78d67-d29ba7
 https://material.io/design/color/dark-theme.html
 https://material.io/design/color/the-color-system.html#color-theme-creation
-[Baseline default VS dark theme] 
+- [Baseline default VS dark theme] 
 https://material.io/design/color/dark-theme.html#ui-application:~:text=The%20dark%20theme%20baseline%20palette
 
 
